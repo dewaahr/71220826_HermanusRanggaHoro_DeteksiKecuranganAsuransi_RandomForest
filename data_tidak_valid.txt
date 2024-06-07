@@ -1,0 +1,69 @@
+Unnamed: 0                                0
+capital-gains                             0
+capital-loss                              0
+incident_hour_of_the_day                  0
+number_of_vehicles_involved               0
+witnesses                                 0
+total_claim_amount                        0
+fraud_reported                            0
+insured_sex_FEMALE                        0
+insured_sex_MALE                          0
+insured_occupation_adm-clerical           0
+insured_occupation_armed-forces           0
+insured_occupation_craft-repair           0
+insured_occupation_exec-managerial        0
+insured_occupation_farming-fishing        0
+insured_occupation_handlers-cleaners      0
+insured_occupation_machine-op-inspct      0
+insured_occupation_other-service          0
+insured_occupation_priv-house-serv        0
+insured_occupation_prof-specialty         0
+insured_occupation_protective-serv        0
+insured_occupation_sales                  0
+insured_occupation_tech-support           0
+insured_occupation_transport-moving       0
+insured_hobbies_chess                     0
+insured_hobbies_cross-fit                 0
+insured_hobbies_other                     0
+incident_type_Multi-vehicle Collision     0
+incident_type_Parked Car                  0
+incident_type_Single Vehicle Collision    0
+incident_type_Vehicle Theft               0
+collision_type_other                      0
+collision_type_Front Collision            0
+collision_type_Rear Collision             0
+collision_type_Side Collision             0
+incident_severity_Major Damage            0
+incident_severity_Minor Damage            0
+incident_severity_Total Loss              0
+incident_severity_Trivial Damage          0
+authorities_contacted_Ambulance           0
+authorities_contacted_Fire                0
+authorities_contacted_None                0
+authorities_contacted_Other               0
+authorities_contacted_Police              0
+age_group_15-20                           0
+age_group_21-25                           0
+age_group_26-30                           0
+age_group_31-35                           0
+age_group_36-40                           0
+age_group_41-45                           0
+age_group_46-50                           0
+age_group_51-55                           0
+age_group_56-60                           0
+age_group_61-65                           0
+months_as_customer_groups_0-50            0
+months_as_customer_groups_101-150         0
+months_as_customer_groups_151-200         0
+months_as_customer_groups_201-250         0
+months_as_customer_groups_251-300         0
+months_as_customer_groups_301-350         0
+months_as_customer_groups_351-400         0
+months_as_customer_groups_401-450         0
+months_as_customer_groups_451-500         0
+months_as_customer_groups_51-100          0
+policy_annual_premium_groups_high         0
+policy_annual_premium_groups_low          0
+policy_annual_premium_groups_medium       0
+policy_annual_premium_groups_very high    0
+policy_annual_premium_groups_very low     0
