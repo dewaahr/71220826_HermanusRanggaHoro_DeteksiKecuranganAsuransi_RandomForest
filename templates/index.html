@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Kecurangan Asuransi</title>
+</head>
+<body>
+    <h1>Deteksi Kecurangan Asuransi Mobil</h1>
+    <style>
+        table {
+            width: 25%;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        table input,
+        table select {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+    <form id="predictionForm">
+    <table>
+        <tr>
+            <td><label for="waktu">Waktu:</label></td>
+            <td><input type="number" id="1" name="waktu" placeholder="Jam (format 24 Jam)" min="0" max="23" required></td>
+        </tr>
+        <tr>
+            <td><label for="saksi">Jumlah Saksi</label></td>
+            <td><input type="number" id="12" name="saksi" min="0" required></td>
+        </tr>
+        <tr>
+            <td><label for="kendaraanTerlibat">Jumlah Kendaraan Terlibat</label></td>
+            <td><input type="number" id="2" name="kendaraanTerlibat" min="0" required></td>
+        </tr>
+        <tr>
+            <td><label for="klaim">Klaim Yang diajukan</label></td>
+            <td><input type="number" id="3" name="klaim" min="0" required></td>
+        </tr>
+        <tr>
+            <td><label for="Pekerjaan">Pekerjaan</label></td>
+            <td>
+                <select id="4" name="Pekerjaan" required>
+                    <option value="Pegawai Kantoran">Pegawai Kantoran</option>
+                    <option value="Anggota Militer">Anggota Militer</option>
+                    <option value="Pekerjaan Kerajinan dan Perbaikan">Pekerjaan Kerajinan dan Perbaikan</option>
+                    <option value="Eksekutif Manager">Eksekutif Manager</option>
+                    <option value="Petani dan Nelayan">Petani dan Nelayan</option>
+                    <option value="Petugas Kebersihan">Petugas Kebersihan</option>
+                    <option value="Operator Mesin">Operator Mesin</option>
+                    <option value="Asisten Rumah Tangga">Asisten Rumah Tangga</option>
+                    <option value="Profesor">Profesor</option>
+                    <option value="Petugas Keamanan">Petugas Keamanan</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Teknisi">Teknisi</option>
+                    <option value="Transportasi/Pengiriman">Transportasi/Pengiriman</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tipeKecelakaan">Tipe Kecelakaan</label></td>
+            <td>
+                <select name="tipeKecelakaan" id="5"> 
+                    <option value="Kecelakaan Ganda">Kecelakaan Ganda</option>
+                    <option value="Kecelakaan Tunggal">Kecelakaan Tunggal</option>
+                    <option value="Pencurian Kendaraan">Pencurian Kendaraan</option>
+                    <option value="Mobil yang Diparkir">Mobil yang Diparkir</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tipekerusakan">Tipe Kerusakan Mobil</label></td>
+            <td>
+                <select name="tipekerusakan" id="6">
+                    <option value="Kerusakan Depan">Kerusakan Depan</option>
+                    <option value="Kerusakan Belakang">Kerusakan Belakang</option>
+                    <option value="Kerusakan Samping">Kerusakan Samping</option>
+                    <option value="Kerusakan Lainnya">Kerusakan Lainnya</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="jeniskerusakan">Tingkat Keparahan</label></td>
+            <td>
+                <select name="jeniskerusakan" id="7">
+                    <option value="Kerusakan Besar">Kerusakan Besar</option>
+                    <option value="Kerusakan Kecil">Kerusakan Kecil</option>
+                    <option value="Kerusakan Total">Kerusakan Total</option>
+                    <option value="Kerusakan Ringan">Kerusakan Ringan</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="otoritasdihubungi">Otoritas Yang dihubungi</label></td>
+            <td>
+                <select name="otoritasdihubungi" id="8">
+                    <option value="Polisi">Polisi</option>
+                    <option value="Pemadam Kebakaran">Pemadam Kebakaran</option>
+                    <option value="Ambulans">Ambulans</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="Umur">Umur</label></td>
+            <td><input type="number" id="9" name="Umur" min="0" required></td>
+        </tr>
+        <tr>
+            <td><label for="lamaAA">Lama Anggota Asuransi (Total Bulan)</label></td>
+            <td><input type="number" id="10" name="lamaAA" min="0" required></td>
+        </tr>
+        <tr>
+            <td><label for="kategoripremi">Ketegori Premi Asuransi</label></td>
+            <td>
+                <select name="kategoripremi" id="11">
+                    <option value="Premi Sangat Tinggi">Premi Sangat Tinggi</option>
+                    <option value="Premi Tinggi">Premi Tinggi</option>
+                    <option value="Premi Sedang">Premi Sedang</option>
+                    <option value="Premi Rendah">Premi Rendah</option>
+                    <option value="Premi Sangat Rendah">Premi Sangat Rendah</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Prediksi Kecurangan">
+    </form>
+
+    <script>
+        document.getElementById("predictionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            var waktu = document.getElementById("1").value;
+            var jumlahSaksi = document.getElementById("12").value;
+            var jumlahKendaraanTerlibat = document.getElementById("2").value;
+            var klaimDiajukan = document.getElementById("3").value;
+            var pekerjaan = document.getElementById("4").value;
+            var tipeKecelakaan = document.getElementById("5").value;
+            var tipeKerusakan = document.getElementById("6").value;
+            var tingkatKeparahan = document.getElementById("7").value;
+            var otoritasDihubungi = document.getElementById("8").value;
+            var umur = document.getElementById("9").value;
+            var lamaAnggotaAsuransi = document.getElementById("10").value;
+            var kategoriPremi = document.getElementById("11").value;
+        
+            var data = {
+                "waktu": waktu,
+                "jumlahSaksi": jumlahSaksi,
+                "jumlahKendaraanTerlibat": jumlahKendaraanTerlibat,
+                "klaimDiajukan": klaimDiajukan,
+                "pekerjaan": pekerjaan,
+                "tipeKecelakaan": tipeKecelakaan,
+                "tipeKerusakan": tipeKerusakan,
+                "tingkatKeparahan": tingkatKeparahan,
+                "otoritasDihubungi": otoritasDihubungi,
+                "umur": umur,
+                "lamaAnggotaAsuransi": lamaAnggotaAsuransi,
+                "kategoriPremi": kategoriPremi
+            };
+        
+            var jsonData = JSON.stringify(data);
+        
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultDiv = document.getElementById("predictionResult");
+                resultDiv.innerHTML = '';
+                // resultDiv.innerHTML += '<p>Pesan: ' + data.pesan + '</p>';
+                resultDiv.innerHTML += '<p>Prediksi: ' + (data.prediction === 1 ? "Kecurangan Terjadi" : "Tidak Ada Kecurangan") + '</p>';
+                resultDiv.innerHTML += '<p>Persentase Terjadinya Kecurangan: ' + (data.persentase * 100).toFixed(2) + '%</p>';
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    <div id="predictionResult"></div>
+</body>
+</html>
